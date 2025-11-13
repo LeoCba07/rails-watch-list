@@ -4,7 +4,27 @@
       <div class="card">
         <div class="card-body">
           <h1><%= @list.name %></h1>
-          <p class="text-muted">Comment</p>
+          <h3>Add a bookmark to this list:</h3>
+          <%= simple_form_for [@list, @bookmark] do |f| %>
+            <%= f.association :movie %>
+            <%= f.input :comment %>
+            <%= f.submit 'Add Movie', class: 'btn btn-primary' %>
+          <% end %>
+          <h3 class="mt-4">Movies in this list:</h3>
+          <% if @list.bookmarks.any? %>
+            <ul class="list-group">
+              <% @list.bookmarks.each do |bookmark| %>
+                <li class="list-group-item">
+                  <strong><%= bookmark.movie.title %></strong> - <%= bookmark.comment %>
+                  <%= link_to 'Remove', bookmark_path(bookmark),
+                      data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' },
+                      class: 'btn btn-sm btn-danger float-end' %>
+                </li>
+              <% end %>
+            </ul>
+          <% else %>
+            <p class="text-muted">No movies added yet.</p>
+          <% end %>
           <div class="mt-4">
             <%= link_to 'Back', lists_path, class: 'btn btn-light' %>
           </div>

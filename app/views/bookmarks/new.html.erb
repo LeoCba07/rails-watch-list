@@ -1,0 +1,8 @@
+<div class="card shadow p-4">
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment %>
+    <%= f.association :movie %>
+    <%= f.submit class: 'btn btn-primary me-2' %>
+    <%= link_to '< Back', list_path(@list), class: 'btn btn-light' %>
+  <% end %>
+</div>
