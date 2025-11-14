@@ -1,0 +1,29 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to lists_path, class: "navbar-brand d-flex align-items-center" do %>
+      <span style="font-size: 1.5rem; margin-right: 0.5rem;">🎬</span>
+      <span style="font-weight: 600;">WatchList</span>
+    <% end %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item active">
+          <%= link_to "Lists", lists_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "New List", new_list_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "https://github.com/leocba07", target: "_blank" do %>
+            <%= image_tag "https://avatars.githubusercontent.com/u/97601275?v=4",
+                class: "avatar",
+                id: "avatar",
+                alt: "GitHub Profile" %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
