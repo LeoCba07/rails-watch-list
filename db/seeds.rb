@@ -1,10 +1,7 @@
 require 'open-uri'
 puts "Cleaning the DB...."
-List.destroy_all
 Movie.destroy_all
 
-
-# the Le Wagon copy of the API
 puts "Creating movies.... \n"
 (1..5).to_a.each do |num|
   url = "http://tmdb.lewagon.com/movie/top_rated?page=#{num}"
@@ -23,3 +20,4 @@ puts "Creating movies.... \n"
   end
 end
 puts "... created #{Movie.count} movies."
+puts "... created #{List.count} lists."

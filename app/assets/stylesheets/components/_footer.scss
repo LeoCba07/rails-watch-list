@@ -1,6 +1,9 @@
 .footer {
   background: #d5d5d5;
   display: flex;
+  left: 0;
+  bottom: 0;
+
   align-items: center;
   justify-content: center;
   height: 100px;
@@ -16,7 +19,7 @@
       opacity: 0.15;
       text-decoration: none;
       font-size: 24px;
-      padding: 0px 10px;
+      padding: 10px 10px;
 
       &:hover {
         opacity: 1;

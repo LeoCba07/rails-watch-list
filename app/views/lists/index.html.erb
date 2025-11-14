@@ -1,14 +1,12 @@
-<%= render 'lists/navbar'%>
 <%= render 'lists/banner'%>
 <div class="container mt-3">
   <div class="row">
-    <div class="col-sm-8 offset-sm-2">
-      <% @lists.each do |list| %>
+    <% @lists.each do |list| %>
+      <div class="col-sm-6">
         <article class="mb-3">
           <%= render 'lists/card', list: list %>
         </article>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>
-<%= render 'lists/footer'%>

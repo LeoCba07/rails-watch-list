@@ -13,7 +13,9 @@
           <%= link_to "Lists", lists_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "New List", new_list_path, class: "nav-link" %>
+          <button type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            New List
+          </button>
         </li>
         <li class="nav-item">
           <%= link_to "https://github.com/leocba07", target: "_blank" do %>
