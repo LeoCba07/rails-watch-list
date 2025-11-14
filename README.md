@@ -36,6 +36,3 @@ Visit `http://localhost:3000`
 ---
 
 Built with ❤️ by [LeoCba07](https://github.com/LeoCba07)
-
-
-Built with ❤️ by LeoCba07
