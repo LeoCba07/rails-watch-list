@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+🎬 Rails Watch List
+A Ruby on Rails application for creating and managing movie watchlists.
+Setup
+bashbundle install
+rails db:create db:migrate db:seed
+rails server
+Visit http://localhost:3000
+Features
 
-Things you may want to cover:
+Create custom movie lists
+Add movies to your watchlists
+Add reviews and comments
+Browse and manage your collections
 
-* Ruby version
+Tech Stack
 
-* System dependencies
+Ruby on Rails
+PostgreSQL
+Bootstrap
+Active Storage
 
-* Configuration
+Database
 
-* Database creation
+List: has many movies through bookmarks
+Movie: has many lists through bookmarks
+Bookmark: joins lists and movies
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Built with ❤️ by LeoCba07
